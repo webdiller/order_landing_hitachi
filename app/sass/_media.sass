@@ -1,0 +1,269 @@
+@import "vars"
+
+/*==========  Mobile First  ==========*/
+
+
+@media only screen and (min-width : 320px)
+	/**/
+
+
+@media only screen and (min-width : 375px)
+	/**/
+
+
+@media only screen and (min-width : 425px)
+	/**/
+
+        
+@media only screen and (min-width : 480px)
+	/**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+	/**/
+
+
+@media only screen and (min-width : 992px)
+	/**/
+
+
+@media only screen and (min-width : 1024px)
+	/**/
+
+
+@media only screen and (min-width : 1200px)
+	/**/
+
+
+@media only screen and (min-width : 1440px)
+	/**/
+
+
+@media only screen and (min-width : 2560px)
+	/**/
+
+/*==========  Desktop first ==========*/
+
+
+@media only screen and (max-width : 320px)
+	header
+		height: 52px
+	.about
+		margin-top: 100px
+		.wrapper
+			padding: 0 20px
+			.about_title
+				position: relative
+				font-weight: 700
+				text-transform: uppercase
+				font-family: "Proxima Nova"
+				&-one
+					display: block
+				&-two
+					display: block
+				&-three
+					display: block
+				&::before
+					content: ""
+					position: absolute
+					width: 150px
+					height: 8px
+					background: $brown
+					bottom: -38px
+					margin: 0 auto
+					left: 0
+					right: 0
+			.about_descr
+				margin-top: 100px
+				display: flex
+				flex-direction: column
+	.categories2
+		margin-top: 100px
+		.wrapper
+			padding: 0 20px
+			.categories2_title-sm
+				display: block
+			.categories2_title
+				display: none
+				position: relative
+				font-weight: 700
+				text-transform: uppercase
+				font-family: "Proxima Nova"
+				&::before
+					content: ""
+					position: absolute
+					width: 150px
+					height: 8px
+					background: $brown
+					bottom: -38px
+					margin: 0 auto
+					left: 0
+					right: 0
+			.categories2_gallery
+				.item
+					width: 100%
+					&:hover
+					&-img
+						width: 380px
+						max-height: 288px
+					&-title
+						padding-left: 16px
+					&-descr
+
+
+@media only screen and (max-width : 375px)
+	/**/
+
+
+@media only screen and (max-width : 425px)
+	/**/
+
+        
+@media only screen and (max-width : 480px)
+	header
+		height: 92px
+	.categories2
+		margin-top: 100px
+		.wrapper
+			.categories2_title-sm
+				display: none
+			.categories2_title
+				&::before
+			.categories2_gallery
+				flex-wrap: wrap
+				.item
+					width: 42%
+					&:hover
+					&-img
+						height: 216px
+					&-title
+						font-size: 15px
+						padding-left: 12px
+					&-descr
+						font-size: 15px
+						line-height: 25px
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+	.first
+		header
+			height: 100px
+			.wrapper
+				.item
+					display: none
+				.item_logo
+					height: 120px
+				.item_md
+					display: block
+	.about
+		margin-top: 100px
+		.wrapper
+			padding: 0 20px
+			.about_title
+				position: relative
+				font-weight: 700
+				text-transform: uppercase
+				font-family: "Proxima Nova"
+				&-one
+					display: inline-block
+				&-two
+					display: inline-block
+				&-three
+					display: block
+				&::before
+					content: ""
+					position: absolute
+					width: 150px
+					height: 8px
+					background: $brown
+					bottom: -38px
+					margin: 0 auto
+					left: 0
+					right: 0
+			.about_descr
+				margin-top: 100px
+				display: flex
+				flex-direction: column
+	.categories2
+		margin-top: 100px
+		.wrapper
+			.categories2_title-sm
+				display: none
+			.categories2_title
+				&::before
+			.categories2_gallery
+				flex-wrap: wrap
+				.item
+					width: 44%
+					&:hover
+					&-img
+						height: 364px
+					&-title
+						padding-left: 16px
+					&-descr
+
+
+@media only screen and (max-width : 992px)
+	/**/
+
+
+@media only screen and (max-width : 1024px)
+	.first
+		header
+			height: 100px
+			.wrapper
+				.item
+					display: none
+				.item_logo
+					height: 120px
+				.item_md
+					display: block
+	.about
+	.categories
+		margin: 50px 0 100px 0
+		.wrapper
+			display: flex
+			flex-wrap: wrap
+			justify-content: center
+			align-items: center
+			.car_item
+				display: flex
+				flex-direction: column
+				text-align: center
+				display: inline-block
+				transition: all .3s ease
+				cursor: pointer
+				&-img
+					width: 306px
+					height: 250.36px
+	.categories2
+		margin-top: 100px
+		.wrapper
+			.categories2_title-sm
+				display: none
+			.categories2_title
+				&::before
+			.categories2_gallery
+				flex-wrap: wrap
+				.item
+					width: 47%
+					&:hover
+					&-img
+						height: 483px
+					&-title
+					&-descr
+
+
+@media only screen and (max-width : 1200px)
+	/**/
+
+
+@media only screen and (max-width : 1440px)
+	/**/
+
+
+@media only screen and (min-width : 2560px)
+	/**/
+

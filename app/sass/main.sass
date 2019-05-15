@@ -1,0 +1,348 @@
+@import "part"
+@import "normalize"
+@import "libs"
+@import "vars"
+@import "fonts"
+
+html
+    scroll-behavior: smooth
+
+body
+    overflow-x: hidden
+    font-weight: 700
+    font-family: 'Ubuntu', Helvetica, sans-serif
+    text-align: center
+    // font-family: 'IBM Plex Mono', monospace
+
+body, html
+    width: 100%
+
+a
+    color: #1B1414
+    transition: all .2s ease
+
+a:hover
+    color: #000000
+    text-decoration: none
+
+// custom - Begin
+.wrapper
+    max-width: 1220px
+    margin: 0 auto
+p
+    margin: 0
+// custom - End
+
+
+// first - Begin
+.first
+    position: relative
+    min-height: 830px
+    background: linear-gradient(0deg,rgba(11, 29, 44, 0.796),rgba(11, 29, 44, 0.796)),url(../img/first_bg.jpg) no-repeat center center
+    background-size: cover
+    header
+        background: #142432
+        height: 120px
+        position: fixed
+        display: block
+        top: 0
+        right: 0
+        left: 0
+        z-index: 1000
+        .wrapper
+            position: relative
+            display: flex
+            justify-content: space-around
+            align-items: center
+            height: inherit
+            .item
+                color: $white
+                font-family: Ubuntu
+                font-style: normal
+                font-weight: normal
+                font-size: 17px
+                height: 54px
+                display: flex
+                flex-direction: column
+                justify-content: center
+                align-items: center
+                &-brown
+                    color: $brown
+                    font-size: 15px
+                &-white
+                    color: $white
+                    font-weight: 700
+                &_logo
+                    width: 150px
+                    height: 140px
+                    background: $white
+                    padding-top: 20px
+                    display: flex
+                    flex-direction: column
+                    justify-content: center
+                    align-items: center
+                    &-top
+                        color: #000
+                    &-bottom
+                        color: #000
+                        text-transform: uppercase
+                        font-weight: 600
+                        font-size: 20px
+            .item_md
+                display: none
+// first - End
+
+
+
+// categories - Begin
+.categories
+    margin: 50px 0 100px 0
+    .wrapper
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+        align-items: center
+        .car_item
+            display: flex
+            flex-direction: column
+            text-align: center
+            display: inline-block
+            transition: all .3s ease
+            cursor: pointer
+            margin: 0 10px
+            &:hover
+                .car_item-text
+                    color: $brown
+            &-img
+                width: 220px
+                height: 180px
+                background: url(../img/car1.jpg) no-repeat center center
+                background-size: cover
+            &-img1
+                background: url(../img/car1.jpg) no-repeat center center
+                background-size: cover
+            &-img2
+                background: url(../img/car2.jpg) no-repeat center center
+                background-size: cover
+            &-img3
+                background: url(../img/car3.jpg) no-repeat center center
+                background-size: cover
+            &-img4
+                background: url(../img/car4.jpg) no-repeat center center
+                background-size: cover
+            &-img5
+                background: url(../img/car5.jpg) no-repeat center center
+                background-size: cover
+            &-text
+                font-family: "Proxima Nova"
+                font-size: 16px
+                font-weight: bold
+                line-height: 24px
+                text-align: center
+                text-transform: uppercase
+                color: #142432
+                transition: all .3s ease
+// categories - End
+
+
+
+// about - Begin
+.about
+    margin-top: 100px
+    .wrapper
+        padding: 0 20px
+        .about_title
+            position: relative
+            font-weight: 700
+            text-transform: uppercase
+            font-family: "Proxima Nova"
+            white-space: wrap
+            &-one
+                display: inline-block
+            &-two
+                display: inline-block
+            &-three
+                display: block
+            &::before
+                content: ""
+                position: absolute
+                width: 150px
+                height: 8px
+                background: $brown
+                bottom: -38px
+                margin: 0 auto
+                left: 0
+                right: 0
+        .about_descr
+            margin-top: 100px
+            display: flex
+            div
+                flex: 1
+            &-left
+                text-align: left
+                font-family: Ubuntu
+                font-style: normal
+                font-weight: normal
+                font-size: 17px
+                line-height: 30px
+                color: #142432
+            &-right
+                text-align: left
+                font-family: Ubuntu
+                font-style: normal
+                font-weight: normal
+                font-size: 17px
+                line-height: 30px
+                color: #142432
+// about - End
+
+
+
+// categories2 - Begin
+.categories2
+    margin: 100px 0 100px 0
+    .wrapper
+        .categories2_title-sm
+            display: none
+        .categories2_title
+            position: relative
+            font-weight: 700
+            text-transform: uppercase
+            font-family: "Proxima Nova"
+            &::before
+                content: ""
+                position: absolute
+                width: 150px
+                height: 8px
+                background: $brown
+                bottom: -38px
+                margin: 0 auto
+                left: 0
+                right: 0
+        .categories2_gallery
+            margin-top: 100px
+            display: flex
+            flex-wrap: nowrap
+            flex-direction: row
+            justify-content: center
+            align-items: center
+            .item
+                margin: 32px 10px 0 10px
+                display: flex
+                flex-direction: column
+                justify-content: center
+                align-items: center
+                text-align: left
+                &:hover
+                    cursor: pointer
+                &-img
+                    position: relative
+                    max-width: 100%
+                    width: 100%
+                    height: 290px
+                    background: #000
+                    background: url(../img/gallery1.jpg)no-repeat 0 0
+                    background-size: cover
+                &-img1
+                    background: url(../img/gallery1.jpg)no-repeat 0 0
+                    background-size: cover
+                &-img2
+                    background: url(../img/gallery2.jpg)no-repeat 0 0
+                    background-size: cover
+                &-img3
+                    background: url(../img/gallery3.jpg)no-repeat 0 0
+                    background-size: cover
+                &-img4
+                    background: url(../img/gallery4.jpg)no-repeat 0 0
+                    background-size: cover
+                &-title
+                    content: ""
+                    position: absolute
+                    bottom: 0
+                    right: 0
+                    left: 0
+                    height: 50px
+                    background: #142432
+                    color: #fff
+                    font-weight: 700
+                    line-height: 50px
+                    text-transform: uppercase
+                    opacity: .8
+                    padding-left: 21px
+                &-descr
+                    font-family: Ubuntu
+                    font-style: normal
+                    font-weight: normal
+                    font-size: 17px
+                    line-height: 30px
+                    transition: all .3s ease
+                    display: inline-block
+                    margin-top: 20px
+// categories2 - End
+
+
+
+// details - Begin
+.details
+    padding: 50px 0
+    background: #F2F2F2
+    .wrapper
+        .details_title 
+            position: relative
+            font-weight: 700
+            text-transform: uppercase
+            font-family: "Proxima Nova"
+            &::before
+                content: ""
+                position: absolute
+                width: 150px
+                height: 8px
+                background: $brown
+                bottom: -38px
+                margin: 0 auto
+                left: 0
+                right: 0
+        .details_gallery
+            margin-top: 100px
+            .item
+                display: flex
+                flex-direction: column
+                justify-content: center
+                align-items: stretch
+                &-img
+                    max-width: 100%
+                    width: 282px
+                    height: auto
+                .item_text
+                    background: #fff
+                    &-title
+                        color: #142432
+                        font-family: Ubuntu
+                        font-style: normal
+                        font-weight: bold
+                        font-size: 20px
+                        line-height: 23px
+                        text-align: left
+                        margin-top: 24px
+                        margin-bottom: 20px
+                    &-price
+                        text-align: left
+                        color: #142432
+                        font-family: Ubuntu
+                        font-style: normal
+                        font-size: 17px
+                        margin-bottom: 22px
+// details - End
+
+
+
+// section - Begin
+// section - End
+
+
+
+// section - Begin
+// section - End
+
+
+@import "media"
