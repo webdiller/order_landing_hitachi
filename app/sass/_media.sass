@@ -143,6 +143,29 @@
 					&-descr
 						font-size: 15px
 						line-height: 25px
+	.details
+		.owl-theme .owl-dots
+       	 	margin-top: 33px
+	footer
+		display: flex
+		flex-direction: column
+		min-height: 600px
+		.left, .right
+			flex: 1
+		.left
+			background: tomato
+			display: flex
+			justify-content: center
+			align-items: center
+			font-size: 24px
+			color: #fff
+		.right
+			display: flex
+			justify-content: center
+			align-items: center
+			font-size: 24px
+			color: #fff
+			background: lightblue
 
 
 /* Small Devices, Tablets */
@@ -261,7 +284,8 @@
 
 
 @media only screen and (max-width : 1440px)
-	/**/
+	.details .owl-theme .owl-nav
+		display: none
 
 
 @media only screen and (min-width : 2560px)

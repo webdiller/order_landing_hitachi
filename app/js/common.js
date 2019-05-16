@@ -17,9 +17,11 @@ $(document).ready(function () {
     });
 
     $('#carousel2').owlCarousel({
+        center: false,
         loop: true,
-        margin: 10,
-        nav: false,
+        margin: 30,
+        nav: true,
+        navText: ["<img src='./img/arrowleft.png'>","<img src='./img/arrowright.png'>"],
         responsive: {
             320: {
                 items: 1
@@ -28,7 +30,7 @@ $(document).ready(function () {
                 items: 2
             },
             768: {
-                items: 3
+                items: 2
             },
             1024: {
                 items: 3
