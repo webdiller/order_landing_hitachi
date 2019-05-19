@@ -372,7 +372,6 @@
 				&_right
 					.item_logo
 						width: 150px
-						height: 120px
 						&-top
 						&-bottom
 							img
@@ -844,6 +843,15 @@
 				.item_logo
 					width: 114px
 					height: 92px
+					&-top
+                        color: #000
+                        position: relative
+                        top: 15px
+                        line-height: 14px
+                        font-weight: normal
+                        width: 100%
+                        font-size: 15px
+                        display: inline-block
 					&-bottom
 						img
 							padding-top: 0
@@ -1287,13 +1295,10 @@
 						content: ""
 						position: absolute
 						left: 20px
-						width: 114px
-						height: 92px
 						background: $brown
 						&-top
 							color: #000
 							position: relative
-							top: 20px
 							width: 100%
 							display: inline-block
 						&-bottom
@@ -1357,8 +1362,10 @@
 					top: 0
 					left: 0
 					position: relative
-					width: 114px
-					height: 92px
+					width: 90px
+					height: 58px
+					&-top
+						top: 4px
 				.item_md
 					display: none
 				.item_sm
@@ -1641,10 +1648,13 @@
 	.first header .wrapper .item_logo-top
 		color: #000
 		position: relative
-		top: 20px
+		top: 4px
 		width: 100%
 		display: inline-block
-	
+	.first header .wrapper .item_logo-bottom
+		position: relative
+		top: -14px
+
 // 320 - 0
 @media only screen and (max-width : 320px)
 	.first .wrapper .first_carousel .first_item-title
