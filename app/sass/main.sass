@@ -32,12 +32,40 @@ a:hover
 p
     margin: 0
 // custom - End
+// padding & margins - Begin
+body .about
+    padding-top: 100px
+body .categories2
+    padding-top: 100px
+    padding-bottom: 100px
+body .details
+    padding-top: 100px
+    padding-bottom: 150px
+body .diagnostic
+    padding-top: 100px
+body .price
+    padding-top: 100px
+body .price2
+    padding-top: 100px
+body footer
+    margin-top: 100px
+// line
+.about .wrapper .about-title,
+.categories2 .wrapper .categories2-title,
+.details .wrapper .details-title,
+.price .wrapper .price-title,
+.price2 .wrapper .price2-title,
+    margin-bottom: 80px
+.diagnostic .wrapper .diagnostic-title
+    margin: 0 auto 80px auto
+// padding & margins - End
 
 
-// first - Begin
+// 1. first - Begin
 .first
     position: relative
-    min-height: 830px
+    min-height: 100vh
+    height: 830px
     background: linear-gradient(0deg,rgba(11, 29, 44, 0.796),rgba(11, 29, 44, 0.796)),url(../img/first_bg.jpg) no-repeat center center
     background-size: cover
     header
@@ -77,412 +105,638 @@ p
                     width: 150px
                     height: 140px
                     background: $white
-                    padding-top: 20px
-                    display: flex
-                    flex-direction: column
-                    justify-content: center
-                    align-items: center
                     &-top
                         color: #000
+                        position: relative
+                        top: 15px
+                        width: 100%
+                        font-size: 15px
+                        display: inline-block
                     &-bottom
-                        color: #000
-                        text-transform: uppercase
-                        font-weight: 600
-                        font-size: 20px
+                        img
+                            padding-top: 15px
+                            width: 60px
             .item_md
                 display: none
-// first - End
-
-
-
+            .item_sm
+                display: none
+    .wrapper
+        position: relative
+        width: 100%
+        height: 100%
+        .first_carousel
+            position: relative
+            top: 50%
+            transform: translateY(-50%)
+            .first_item
+                &-title
+                    max-width: 1020px
+                    margin: 0 auto
+                    position: relative
+                    font-family: Proxima Nova
+                    font-size: 64px
+                    line-height: 78px
+                    text-align: center
+                    text-transform: uppercase
+                    color: #FFFFFF
+                    font-weight: 900
+                    padding: 0 20px
+                    &::before
+                        content: ""
+                        position: absolute
+                        width: 150px
+                        height: 8px
+                        left: 0
+                        right: 0
+                        bottom: -32px
+                        margin: 0 auto
+                        background: #EED2A1
+                &-descr
+                    font-family: Ubuntu
+                    font-style: normal
+                    font-weight: normal
+                    font-size: 24px
+                    line-height: 38px
+                    text-align: center
+                    color: #FFFFFF
+                    margin: 82px auto 0 auto
+                    max-width: 400px
+                    padding: 0 20px
+            .owl-dots
+                margin: 0
+                position: relative
+                top: 130px
+                .owl-dot
+                    outline: none
+                    span
+                        width: 20px
+                        height: 20px
+                        margin: 0 15px
+                        background: #505965
+                        transition: all .3s ease
+                        &:hover
+                            background: #fff
+                .owl-dot.active
+                    span
+                        background: #fff 
+            .owl-nav
+                top: 35%
+                right: 0
+                left: 0
+                content: ""
+                position: absolute
+                width: 100%
+                z-index: 1
+            .owl-nav button.owl-prev
+                transition: all .3s ease
+                outline: none
+                position: absolute
+                left: -70px
+                &:hover
+                    background: none
+            .owl-nav button.owl-next
+                transition: all .3s ease
+                outline: none
+                position: absolute
+                right: -70px
+                top: 25%
+                &:hover
+                    background: none
+                &:hover img
+                    filter: hue-rotate(180deg)
+// 1. first - End
 // categories - Begin
 .categories
-    margin: 50px 0 100px 0
-    .wrapper
-        display: flex
-        flex-wrap: wrap
-        justify-content: center
-        align-items: center
-        .car_item
+    padding-top: 20px
+    .wrapper    
+        padding: 0 10px
+        .categories_wrapper
             display: flex
-            flex-direction: column
-            text-align: center
-            display: inline-block
-            transition: all .3s ease
-            cursor: pointer
-            margin: 0 10px
-            &:hover
-                .car_item-text
-                    color: $brown
-            &-img
-                width: 220px
-                height: 180px
-                background: url(../img/car1.jpg) no-repeat center center
-                background-size: cover
-            &-img1
-                background: url(../img/car1.jpg) no-repeat center center
-                background-size: cover
-            &-img2
-                background: url(../img/car2.jpg) no-repeat center center
-                background-size: cover
-            &-img3
-                background: url(../img/car3.jpg) no-repeat center center
-                background-size: cover
-            &-img4
-                background: url(../img/car4.jpg) no-repeat center center
-                background-size: cover
-            &-img5
-                background: url(../img/car5.jpg) no-repeat center center
-                background-size: cover
-            &-text
-                font-family: "Proxima Nova"
-                font-size: 16px
-                font-weight: bold
-                line-height: 24px
-                text-align: center
-                text-transform: uppercase
-                color: #142432
-                transition: all .3s ease
-// categories - End
-
-
-
-// about - Begin
-.about
-    margin-top: 100px
-    .wrapper
-        padding: 0 20px
-        .about_title
-            position: relative
-            font-weight: 700
-            text-transform: uppercase
-            font-family: "Proxima Nova"
-            white-space: wrap
-            &-one
-                display: inline-block
-            &-two
-                display: inline-block
-            &-three
-                display: block
-            &::before
-                content: ""
-                position: absolute
-                width: 150px
-                height: 8px
-                background: $brown
-                bottom: -38px
-                margin: 0 auto
-                left: 0
-                right: 0
-        .about_descr
-            margin-top: 100px
-            display: flex
-            div
-                flex: 1
-            &-left
-                text-align: left
-                font-family: Ubuntu
-                font-style: normal
-                font-weight: normal
-                font-size: 17px
-                line-height: 30px
-                color: #142432
-            &-right
-                text-align: left
-                font-family: Ubuntu
-                font-style: normal
-                font-weight: normal
-                font-size: 17px
-                line-height: 30px
-                color: #142432
-// about - End
-
-
-
-// categories2 - Begin
-.categories2
-    margin: 100px 0 100px 0
-    .wrapper
-        .categories2_title-sm
-            display: none
-        .categories2_title
-            position: relative
-            font-weight: 700
-            text-transform: uppercase
-            font-family: "Proxima Nova"
-            &::before
-                content: ""
-                position: absolute
-                width: 150px
-                height: 8px
-                background: $brown
-                bottom: -38px
-                margin: 0 auto
-                left: 0
-                right: 0
-        .categories2_gallery
-            margin-top: 100px
-            display: flex
-            flex-wrap: nowrap
-            flex-direction: row
-            justify-content: center
+            justify-content: space-around
             align-items: center
+            .item:last-child
+                margin-right: 0
             .item
-                margin: 32px 10px 0 10px
-                display: flex
-                flex-direction: column
-                justify-content: center
-                align-items: center
-                text-align: left
                 &:hover
                     cursor: pointer
-                &-img
-                    position: relative
+                &:hover .item_title
+                    color: $brown
+                margin-top: 40px
+                .item_img
                     max-width: 100%
-                    width: 100%
-                    height: 290px
-                    background: #000
-                    background: url(../img/gallery1.jpg)no-repeat 0 0
-                    background-size: cover
-                &-img1
-                    background: url(../img/gallery1.jpg)no-repeat 0 0
-                    background-size: cover
-                &-img2
-                    background: url(../img/gallery2.jpg)no-repeat 0 0
-                    background-size: cover
-                &-img3
-                    background: url(../img/gallery3.jpg)no-repeat 0 0
-                    background-size: cover
-                &-img4
-                    background: url(../img/gallery4.jpg)no-repeat 0 0
-                    background-size: cover
-                &-title
-                    content: ""
-                    position: absolute
-                    bottom: 0
-                    right: 0
-                    left: 0
-                    height: 50px
-                    background: #142432
-                    color: #fff
-                    font-weight: 700
-                    line-height: 50px
+                    width: 220px
+                    height: auto
+                .item_title
+                    font-family: Proxima Nova
+                    font-size: 20px
+                    line-height: 24px
+                    text-align: center
                     text-transform: uppercase
-                    opacity: .8
-                    padding-left: 21px
-                &-descr
+                    color: #142432
+                    font-weight: 800
+                    margin-top: 16px
+                    transition: all .3s ease
+// categories - End
+// 3. about - Begin
+.about
+    .wrapper
+        padding: 0 20px
+        .about-title
+            font-family: Proxima Nova
+            font-size: 42px
+            line-height: 51px
+            text-align: center
+            text-transform: uppercase
+            color: #142432
+            font-weight: 800
+            position: relative
+            &::before
+                content: ""
+                position: absolute
+                background: #EED2A1
+                bottom: -38px
+                left: 0
+                right: 0
+                margin: 0 auto
+                width: 150px
+                height: 8px
+        .about_wrapper
+            display: flex
+            .item
+                flex: 1
+                &-text
                     font-family: Ubuntu
                     font-style: normal
                     font-weight: normal
                     font-size: 17px
                     line-height: 30px
-                    transition: all .3s ease
-                    display: inline-block
+                    color: #142432
+                    text-align: left
+                &-text3
+                    margin-top: 30px
+            .item_left
+            .item_right
+                margin-left: 30px
+// 3. about - End
+// 4. categories2 - Begin
+.categories2
+    .wrapper
+        padding: 0 20px
+        .categories2-title-sm
+            display: none
+        .categories2-title
+            font-family: Proxima Nova
+            font-size: 42px
+            line-height: 51px
+            text-align: center
+            text-transform: uppercase
+            color: #142432
+            font-weight: 800
+            position: relative
+            &::before
+                content: ""
+                position: absolute
+                background: #EED2A1
+                bottom: -38px
+                left: 0
+                right: 0
+                margin: 0 auto
+                width: 150px
+                height: 8px
+        .categories2_wrapper
+            display: flex
+            justify-content: center
+            align-items: baseline
+            .item
+                margin: 20px 15px
+                .img-wrapper
+                    position: relative
+                    img
+                        height: auto
+                    .img-title
+                        content: ""
+                        position: absolute
+                        bottom: 0
+                        right: 0
+                        left: 0
+                        height: 50px
+                        background: #142432
+                        opacity: 0.8
+                        color: #fff
+                        line-height: 50px
+                        text-align: left
+                        padding-left: 16px
+                        font-family: Proxima Nova
+                        font-size: 20px
+                        text-transform: uppercase
+                        color: #FFFFFF
+                .item-text
+                    font-family: Ubuntu
+                    font-style: normal
+                    font-weight: normal
+                    font-size: 17px
+                    line-height: 30px
+                    color: #142432
+                    text-align: left
                     margin-top: 20px
-// categories2 - End
-
-
-
-// details - Begin
+// 4. categories2 - End
+// 3. details - Begin
 .details
-    padding: 50px 20px 100px 20px
     background: #F2F2F2
     .wrapper
-        .details_title 
-            position: relative
-            font-weight: 700
+        padding: 0 20px
+        .details-title-sm
+            display: none
+            font-family: Proxima Nova
+            font-size: 42px
+            line-height: 51px
+            text-align: center
             text-transform: uppercase
-            font-family: "Proxima Nova"
+            color: #142432
+            font-weight: 800
+            position: relative
             &::before
                 content: ""
                 position: absolute
-                width: 150px
-                height: 8px
-                background: $brown
+                background: #EED2A1
                 bottom: -38px
-                margin: 0 auto
                 left: 0
                 right: 0
-        .details_gallery
-            margin-top: 100px
-            .detail_item
-                display: flex
-                flex-direction: column
-                justify-content: center
-                align-items: stretch
-                &-img
+                margin: 0 auto
+                width: 150px
+                height: 8px
+        .details-title
+            font-family: Proxima Nova
+            font-size: 42px
+            line-height: 51px
+            text-align: center
+            text-transform: uppercase
+            color: #142432
+            font-weight: 800
+            position: relative
+            &::before
+                content: ""
+                position: absolute
+                background: #EED2A1
+                bottom: -38px
+                left: 0
+                right: 0
+                margin: 0 auto
+                width: 150px
+                height: 8px
+    .details_wrapper
+        position: relative
+        max-width: 1220px
+        margin: 0 auto
+        .details_carousel
+            position: relative
+            top: 50%
+            margin-top: 40px
+            .item
+                .item_img
                     max-width: 100%
+                    width: 280px
                     height: auto
-                .detail_item_text
+                .item_info
                     background: #fff
+                    padding-left: 25px
                     &-title
-                        color: #142432
-                        font-family: Ubuntu
-                        font-style: normal
-                        font-weight: bold
+                        font-family: Proxima Nova
                         font-size: 20px
-                        line-height: 23px
-                        text-align: left
-                        margin-top: 24px
-                        margin-bottom: 20px
-                        padding-left: 25px
-                    &-price
-                        text-align: left
+                        line-height: 24px
+                        text-align: center
                         color: #142432
+                        font-weight: 700
+                        padding-top: 24px
+                        text-align: left
+                    &-descr
+                        font-family: Proxima Nova
+                        font-size: 17px
+                        line-height: 24px
+                        text-align: center
+                        color: #142432
+                        font-weight: 400
+                        margin-top: 16px
+                        text-align: left
+                        padding-bottom: 22px
+            .owl-dots
+                margin: 0
+                position: relative
+                top: 50px
+                .owl-dot
+                    outline: none
+                    span
+                        width: 20px
+                        height: 20px
+                        margin: 0 15px
+                        background: #505965
+                        transition: all .3s ease
+                        &:hover
+                            background: #EED2A1
+                .owl-dot.active
+                    span
+                        background: #EED2A1 
+            .owl-nav
+                top: 35%
+                right: 0
+                left: 0
+                content: ""
+                position: absolute
+                width: 100%
+                z-index: 1
+            .owl-nav button.owl-prev
+                transition: all .3s ease
+                outline: none
+                position: absolute
+                left: -100px
+                &:hover
+                    background: none
+            .owl-nav button.owl-next
+                transition: all .3s ease
+                outline: none
+                position: absolute
+                right: -100px
+                top: 25%
+                &:hover
+                    background: none
+// 3. details - End
+// 4. diagnostic - Begin
+.diagnostic
+    .wrapper
+        padding: 0 20px
+        .diagnostic-title
+            max-width: 700px
+            font-family: Proxima Nova
+            font-size: 42px
+            line-height: 51px
+            text-align: center
+            text-transform: uppercase
+            color: #142432
+            font-weight: 800
+            position: relative
+            &::before
+                content: ""
+                position: absolute
+                background: #EED2A1
+                bottom: -38px
+                left: 0
+                right: 0
+                margin: 0 auto
+                width: 150px
+                height: 8px
+        .diagnostic_wrapper 
+            .group
+                min-height: 60px
+                background: #F2F2F2
+                text-align: left
+                margin: 10px 0
+                padding-left: 10px
+                display: flex
+                flex-wrap: wrap
+                justify-content: flex-start
+                align-items: center
+                position: relative
+                label
+                    font-family: Ubuntu
+                    font-style: normal
+                    font-weight: normal
+                    font-size: 17px
+                    color: #142432
+                    cursor: pointer
+                input[type="checkbox"]
+                    display: none
+                    &:checked + label::before
+                        content: url(../img/checked.png)
+                        background: #EED2A1
+                label
+                    padding-left: 30px
+                    margin-bottom: 0
+                    padding-right: 16px
+                    padding-top: 10px
+                    padding-bottom: 10px
+                    &::before
+                        transition: all .3s ease
+                        position: absolute
+                        content: url(../img/checked.png)
+                        top: 50%
+                        transform: translateY(-50%)
+                        right: 0
+                        bottom: 0
+                        text-align: center
+                        vertical-align: middle
+                        left: 8px
+                        width: 24px
+                        height: 24px
+                        background: #ffffff
+                        border: 1px solid #C4C4C4
+            .showMore
+                font-family: Ubuntu
+                font-style: normal
+                font-weight: normal
+                font-size: 17px
+                line-height: 20px
+                text-align: center
+                color: #EED2A1
+                position: relative
+                display: inline-block
+                transition: all .3s ease
+                &::before
+                    content: url(../img/arrow_down.png)
+                    position: absolute
+                    left: -24px
+                &:hover
+                    cursor: pointer
+                    color: #dfac53
+        .showMoreTarget
+            display: none
+        .showMoreTarget.active
+            display: block
+// 4. diagnostic - End
+// 5. price - Begin
+.price
+    .wrapper
+        padding: 0 20px
+        .price-title
+            font-family: Proxima Nova
+            font-size: 42px
+            line-height: 51px
+            text-align: center
+            text-transform: uppercase
+            color: #142432
+            font-weight: 800
+            position: relative
+            &::before
+                content: ""
+                position: absolute
+                background: #EED2A1
+                bottom: -38px
+                left: 0
+                right: 0
+                margin: 0 auto
+                width: 150px
+                height: 8px
+        .price_wrapper
+            display: flex
+            flex-direction: column
+            .thead
+                display: flex
+                background: #f2f2f2
+                border-bottom: 1px solid #BDBDBD
+                p
+                    height: 50px
+                    text-align: left
+                    flex: 1
+                    font-family: Ubuntu
+                    font-style: normal
+                    font-weight: bold
+                    font-size: 20px
+                    line-height: 50px
+                    color: #142432
+                    padding-left: 20px
+            .tr
+                display: flex
+                border-bottom: 1px solid #F2F2F2
+                p
+                    text-align: left
+                    flex: 1
+                    font-family: Ubuntu
+                    font-style: normal
+                    font-weight: normal
+                    font-size: 17px
+                    line-height: 50px
+                    color: #142432
+                    padding-left: 20px
+// 5. price - End
+// 5. price2 - Begin
+.price2
+    .wrapper
+        padding: 0 20px
+        .price2-title
+            font-family: Proxima Nova
+            font-size: 42px
+            line-height: 51px
+            text-align: center
+            text-transform: uppercase
+            color: #142432
+            font-weight: 800
+            position: relative
+            &::before
+                content: ""
+                position: absolute
+                background: #EED2A1
+                bottom: -38px
+                left: 0
+                right: 0
+                margin: 0 auto
+                width: 150px
+                height: 8px
+        .price2_wrapper
+            display: flex
+            flex-direction: column
+            .thead
+                display: flex
+                background: #f2f2f2
+                border-bottom: 1px solid #BDBDBD
+                p
+                    height: 50px
+                    text-align: left
+                    flex: 1
+                    font-family: Ubuntu
+                    font-style: normal
+                    font-weight: bold
+                    font-size: 20px
+                    line-height: 50px
+                    color: #142432
+                    padding-left: 20px
+            .tr
+                display: flex
+                border-bottom: 1px solid #F2F2F2
+                p
+                    text-align: left
+                    flex: 1
+                    font-family: Ubuntu
+                    font-style: normal
+                    font-weight: normal
+                    font-size: 17px
+                    line-height: 50px
+                    color: #142432
+                    padding-left: 20px
+// 5. price2 - End
+// 7. footer - Begin
+footer
+    .footer_wrapper
+        .item
+            min-height: 600px
+            &_left
+                display: inline-block
+                width: 50%
+                height: 600px
+                margin: 0
+                margin-right: -4px
+            &_right
+                display: inline-block
+                width: 50%
+                height: 600px
+                margin: 0
+                background: linear-gradient(0deg,rgba(11, 29, 44, 0.9),rgba(11, 29, 44, 0.9)),url(../img/first_bg.jpg) no-repeat center center
+                background-size: cover
+                position: relative
+                .item_logo
+                    content: ""
+                    position: absolute
+                    left: 70px
+                    width: 150px
+                    height: 140px
+                    background: $brown
+                    font-size: 15px
+                    &-top
+                        color: #000
+                        position: relative
+                        top: 15px
+                        width: 100%
+                        font-size: 15px
+                        display: inline-block
+                    &-bottom
+                        img
+                            padding-top: 15px
+                            width: 60px
+                .contacts
+                    content: ""
+                    position: absolute
+                    max-width: 520px
+                    top: 50%
+                    height: 200px
+                    left: 74px
+                    transform: translateY(-50%)
+                    display: flex
+                    flex-wrap: wrap
+                    .contacts_item
+                        text-align: left
+                        width: 50%
+                        color: $white
                         font-family: Ubuntu
                         font-style: normal
+                        font-weight: normal
                         font-size: 17px
-                        padding-left: 25px
-                        margin-bottom: 22px
-    .owl-theme .owl-dots
-        margin-top: 52px
-    .owl-theme .owl-dots .owl-dot span
-        background: #505965
-        width: 20px
-        height: 20px
-        margin: 0 15px
-    .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span
-        background: #EED2A1
-    .owl-theme .owl-dots .owl-dot
-        outline: none
-    .owl-theme .owl-nav
-        top: 0
-        right: 0
-        left: 0
-        bottom: 0
-        content: ""
-        position: absolute
-        width: 100%
-        z-index: -1
-    .owl-carousel .owl-nav button.owl-prev
-        position: absolute
-        left: -100px
-        top: 25%
-        &:hover
-            background: none
-    .owl-carousel .owl-nav button.owl-next
-        position: absolute
-        right: -100px
-        top: 25%
-        &:hover
-            background: none
-        &:hover img
-            filter: hue-rotate(180deg)
-            
-        
-// details - End
-
-
-
-// price - Begin
-.price
-    padding-top: 100px
-    .price_title 
-            position: relative
-            font-weight: 700
-            text-transform: uppercase
-            font-family: "Proxima Nova"
-            &::before
-                content: ""
-                position: absolute
-                width: 150px
-                height: 8px
-                background: $brown
-                bottom: -38px
-                margin: 0 auto
-                left: 0
-                right: 0
-    .table
-        margin-top: 80px
-        &-row-head
-            background: #F2F2F2
-            display: flex
-            height: 50px
-            border-bottom: 1px solid #BDBDBD
-            p
-                line-height: 50px
-                text-align: left
-                flex: 1
-                padding-left: 21px
-        &-row
-            background: #fff
-            display: flex
-            height: 50px
-            border-bottom: 1px solid #F2F2F2
-            p
-                line-height: 50px
-                text-align: left
-                flex: 1
-                padding-left: 21px
-// price - End
-
-
-
-// price2 - Begin
-.price2
-    padding-top: 100px
-    .price2_title 
-            position: relative
-            font-weight: 700
-            text-transform: uppercase
-            font-family: "Proxima Nova"
-            &::before
-                content: ""
-                position: absolute
-                width: 150px
-                height: 8px
-                background: $brown
-                bottom: -38px
-                margin: 0 auto
-                left: 0
-                right: 0
-    .table
-        margin-top: 80px
-        &-row-head
-            background: #F2F2F2
-            display: flex
-            height: 50px
-            border-bottom: 1px solid #BDBDBD
-            p
-                line-height: 50px
-                text-align: left
-                flex: 1
-                padding-left: 21px
-        &-row
-            background: #fff
-            display: flex
-            height: 50px
-            border-bottom: 1px solid #F2F2F2
-            p
-                line-height: 50px
-                text-align: left
-                flex: 1
-                padding-left: 21px
-// price2 - End
-
-
-
-// footer - Begin
-footer
-    display: flex
-    min-height: 600px
-    .left, .right
-        flex: 1
-    .left
-        background: tomato
-        display: flex
-        justify-content: center
-        align-items: center
-        font-size: 24px
-        color: #fff
-    .right
-        display: flex
-        justify-content: center
-        align-items: center
-        font-size: 24px
-        color: #fff
-        background: lightblue
-// footer - End
-
+                        &-brown
+                            color: $brown
+                            font-size: 15px
+                        &-white
+                            color: $white
+                            font-weight: 700
+                .info
+                    content: ""
+                    position: absolute
+                    bottom: 50px
+                    left: 74px
+                    font-family: Ubuntu
+                    font-style: normal
+                    font-weight: normal
+                    font-size: 15px
+                    width: 60%
+                    text-align: left
+                    line-height: 17px
+                    color: #828282
+// 7. footer - End
 
 @import "media"
