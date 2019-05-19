@@ -4,6 +4,33 @@
 /*==========  Desktop first ==========*/
 // 1440 - 1024
 @media only screen and (max-width : 1440px)
+	// padding & margins - Begin
+	body .about
+		padding-top: 90px
+	body .categories2
+		padding-top: 90px
+		padding-bottom: 90px
+	body .details
+		padding-top: 90px
+		padding-bottom: 150px
+	body .diagnostic
+		padding-top: 90px
+	body .price
+		padding-top: 90px
+	body .price2
+		padding-top: 90px
+	body footer
+		margin-top: 90px
+	// line
+	.about .wrapper .about-title,
+	.categories2 .wrapper .categories2-title,
+	.details .wrapper .details-title,
+	.price .wrapper .price-title,
+	.price2 .wrapper .price2-title,
+		margin-bottom: 80px
+	.diagnostic .wrapper .diagnostic-title
+		margin: 0 auto 80px auto
+	// padding & margins - End
 	// 1. first - Begin
 	.first
 		header
@@ -39,7 +66,6 @@
 	// 1. first - End
 	// categories - Begin
 	.categories
-		padding-top: 20px
 		.wrapper    
 			padding: 0 10px
 			.categories_wrapper
@@ -68,7 +94,6 @@
 	// categories - End
 	// 3. categories2 - Begin
 	.categories2
-		padding-bottom: 70px
 		.wrapper
 			padding: 0 10px
 			.categories2-title-sm
@@ -93,14 +118,13 @@
 					width: 150px
 					height: 8px
 			.categories2_wrapper
-				margin-top: 80px
 				display: flex
 				justify-content: center
 				align-items: baseline
 				flex-wrap: wrap
 				.item
 					margin: 20px 15px
-					width: 45%
+					width: 47%
 					.img-wrapper
 						width: 100%
 						position: relative
@@ -136,7 +160,6 @@
 	// 3. categories2 - End
 	// 3. details - Begin
 	.details
-		padding: 100px 0
 		background: #F2F2F2
 		.wrapper
 			padding: 0 20px
@@ -169,7 +192,6 @@
 				color: #142432
 				font-weight: 800
 				position: relative
-				margin-bottom: 100px
 				&::before
 					content: ""
 					position: absolute
@@ -234,7 +256,6 @@
 	// 3. details - End
 	// 5. price - Begin
 	.price
-		padding: 100px 0
 		.wrapper
 			padding: 0 20px
 			.price-title
@@ -257,7 +278,6 @@
 					width: 150px
 					height: 8px
 			.price_wrapper
-				margin-top: 100px  
 				display: flex
 				flex-direction: column
 				.thead
@@ -291,7 +311,6 @@
 	// 5. price - End
 	// 5. price2 - Begin
 	.price2
-		padding: 100px 0
 		.wrapper
 			padding: 0 20px
 			.price2-title
@@ -314,7 +333,6 @@
 					width: 150px
 					height: 8px
 			.price2_wrapper
-				margin-top: 100px  
 				display: flex
 				flex-direction: column
 				.thead
@@ -346,9 +364,58 @@
 						color: #142432
 						padding-left: 20px
 	// 5. price2 - End
+	// 7. footer - Begin
+	footer
+		.footer_wrapper
+			.item
+				&_left
+				&_right
+					.item_logo
+						width: 150px
+						height: 120px
+						&-top
+						&-bottom
+							img
+								padding-top: 10px
+								width: 60px
+					.contacts
+						.contacts_item
+							&-brown
+								color: $brown
+								font-size: 15px
+							&-white
+					.info
+	// 7. footer - End
 
 // 1024 - 768
 @media only screen and (max-width : 1024px)
+	// padding & margins - Begin
+	body .about
+		padding-top: 80px
+	body .categories2
+		padding-top: 80px
+		padding-bottom: 80px
+	body .details
+		padding-top: 80px
+		padding-bottom: 130px
+	body .diagnostic
+		padding-top: 80px
+	body .price
+		padding-top: 80px
+	body .price2
+		padding-top: 80px
+	body footer
+		margin-top: 80px
+	// line
+	.about .wrapper .about-title,
+	.categories2 .wrapper .categories2-title,
+	.details .wrapper .details-title,
+	.price .wrapper .price-title,
+	.price2 .wrapper .price2-title,
+		margin-bottom: 80px
+	.diagnostic .wrapper .diagnostic-title
+		margin: 0 auto 80px auto
+	// padding & margins - End
 	// 1. first - Begin
 	.first
 		header
@@ -383,7 +450,6 @@
 	// 1. first - End
 	// categories - Begin
 	.categories
-		padding-top: 20px
 		.wrapper    
 			padding: 0 10px
 			.categories_wrapper
@@ -411,53 +477,9 @@
 						margin-top: 16px
 	// categories - End
 	// 2. about - Begin
-	.about
-		padding: 80px 0 90px 0
-		.wrapper
-			padding: 0 20px
-			.about-title
-				font-family: Proxima Nova
-				font-size: 42px
-				line-height: 51px
-				text-align: center
-				text-transform: uppercase
-				color: #142432
-				font-weight: 800
-				position: relative
-				&::before
-					content: ""
-					position: absolute
-					background: #EED2A1
-					bottom: -38px
-					left: 0
-					right: 0
-					margin: 0 auto
-					width: 150px
-					height: 8px
-			.about_wrapper
-				margin-top: 100px  
-				display: flex
-				flex-direction: column
-				.item
-					flex: 1
-					&-text
-						font-family: Ubuntu
-						font-style: normal
-						font-weight: normal
-						font-size: 17px
-						line-height: 30px
-						color: #142432
-						text-align: left
-					&-text3
-						margin-top: 30px
-				.item_left
-				.item_right
-					margin-left: 0
-					margin-top: 30px
 	// 2. about - End
 	// 3. categories2 - Begin
 	.categories2
-		padding-bottom: 70px
 		.wrapper
 			padding: 0 10px
 			.categories2-title-sm
@@ -482,7 +504,6 @@
 					width: 150px
 					height: 8px
 			.categories2_wrapper
-				margin-top: 80px
 				display: flex
 				justify-content: center
 				align-items: baseline
@@ -525,7 +546,6 @@
 	// 3. categories2 - End
 	// 3. details - Begin
 	.details
-		padding: 100px 0
 		background: #F2F2F2
 		.wrapper
 			padding: 0 20px
@@ -551,14 +571,13 @@
 					height: 8px
 			.details-title
 				font-family: Proxima Nova
-				font-size: 32px
+				font-size: 42px
 				line-height: 51px
 				text-align: center
 				text-transform: uppercase
 				color: #142432
 				font-weight: 800
 				position: relative
-				margin-bottom: 100px
 				&::before
 					content: ""
 					position: absolute
@@ -623,7 +642,6 @@
 	// 3. details - End
 	// 5. price - Begin
 	.price
-		padding: 100px 0
 		.wrapper
 			padding: 0 20px
 			.price-title
@@ -646,7 +664,6 @@
 					width: 150px
 					height: 8px
 			.price_wrapper
-				margin-top: 100px  
 				display: flex
 				flex-direction: column
 				.thead
@@ -680,7 +697,6 @@
 	// 5. price - End
 	// 5. price2 - Begin
 	.price2
-		padding: 100px 0
 		.wrapper
 			padding: 0 20px
 			.price2-title
@@ -703,7 +719,6 @@
 					width: 150px
 					height: 8px
 			.price2_wrapper
-				margin-top: 100px  
 				display: flex
 				flex-direction: column
 				.thead
@@ -792,6 +807,33 @@
 
 // 768 - 480
 @media only screen and (max-width : 768px)
+	// padding & margins - Begin
+	body .about
+		padding-top: 70px
+	body .categories2
+		padding-top: 70px
+		padding-bottom: 70px
+	body .details
+		padding-top: 70px
+		padding-bottom: 120px
+	body .diagnostic
+		padding-top: 70px
+	body .price
+		padding-top: 70px
+	body .price2
+		padding-top: 70px
+	body footer
+		margin-top: 70px
+	// line
+	.about .wrapper .about-title,
+	.categories2 .wrapper .categories2-title,
+	.details .wrapper .details-title,
+	.price .wrapper .price-title,
+	.price2 .wrapper .price2-title,
+		margin-bottom: 80px
+	.diagnostic .wrapper .diagnostic-title
+		margin: 0 auto 80px auto
+	// padding & margins - End
 	// 1. first - Begin
 	.first
 		header
@@ -802,6 +844,10 @@
 				.item_logo
 					width: 114px
 					height: 92px
+					&-bottom
+						img
+							padding-top: 0
+							top: 0
 				.item_md
 					display: none
 				.item_sm
@@ -814,7 +860,8 @@
 					&-title
 						margin: 0 auto
 						font-size: 32px
-						line-height: 51px
+						line-height: 39px
+						max-width: 500px
 						&::before
 							width: 150px
 							height: 8px
@@ -826,7 +873,6 @@
 	// 1. first - End
 	// categories - Begin
 	.categories
-		padding-top: 20px
 		.wrapper    
 			padding: 0 10px
 			.categories_wrapper
@@ -855,7 +901,6 @@
 	// categories - End
 	// 2. about - Begin
 	.about
-		padding: 75px 0 75px 0
 		.wrapper
 			padding: 0 20px
 			.about-title
@@ -878,7 +923,6 @@
 					width: 150px
 					height: 8px
 			.about_wrapper
-				margin-top: 100px  
 				display: flex
 				flex-direction: column
 				.item
@@ -900,7 +944,6 @@
 	// 2. about - End
 	// 3. categories2 - Begin
 	.categories2
-		padding-bottom: 70px
 		.wrapper
 			padding: 0 10px
 			.categories2-title-sm
@@ -925,7 +968,6 @@
 					width: 150px
 					height: 8px
 			.categories2_wrapper
-				margin-top: 80px
 				display: flex
 				justify-content: center
 				align-items: baseline
@@ -968,7 +1010,6 @@
 	// 3. categories2 - End
 	// 3. details - Begin
 	.details
-		padding: 100px 0
 		background: #F2F2F2
 		.wrapper
 			padding: 0 20px
@@ -1002,7 +1043,6 @@
 				color: #142432
 				font-weight: 800
 				position: relative
-				margin-bottom: 100px
 				&::before
 					content: ""
 					position: absolute
@@ -1065,9 +1105,57 @@
 					&:hover
 						background: none
 	// 3. details - End
+	// 4. diagnostic - Begin
+	.diagnostic
+		.wrapper
+			.diagnostic-title
+				max-width: 400px
+				font-size: 32px
+				line-height: 39px
+				&::before
+					content: ""
+					position: absolute
+					background: #EED2A1
+					bottom: -38px
+					left: 0
+					right: 0
+					margin: 0 auto
+					width: 150px
+					height: 8px
+			.diagnostic_wrapper 
+				.group
+					background: #F2F2F2
+					text-align: left
+					margin: 10px 0
+					padding-left: 10px
+					label
+						font-family: Ubuntu
+						font-style: normal
+						font-weight: normal
+						font-size: 17px
+						color: #142432
+						cursor: pointer
+				.showMore
+					font-family: Ubuntu
+					font-style: normal
+					font-weight: normal
+					font-size: 17px
+					line-height: 20px
+					text-align: center
+					color: #EED2A1
+					position: relative
+					display: inline-block
+					transition: all .3s ease
+					&:hover
+						cursor: pointer
+						color: #dfac53
+			.showMoreTarget
+				display: none
+			.showMoreTarget.active
+				display: block
+	// 4. diagnostic - End
 	// 5. price - Begin
 	.price
-		padding: 100px 0
 		.wrapper
 			padding: 0 20px
 			.price-title
@@ -1090,7 +1178,6 @@
 					width: 150px
 					height: 8px
 			.price_wrapper
-				margin-top: 100px  
 				display: flex
 				flex-direction: column
 				.thead
@@ -1124,7 +1211,6 @@
 	// 5. price - End
 	// 5. price2 - Begin
 	.price2
-		padding: 100px 0
 		.wrapper
 			padding: 0 20px
 			.price2-title
@@ -1147,7 +1233,6 @@
 					width: 150px
 					height: 8px
 			.price2_wrapper
-				margin-top: 100px  
 				display: flex
 				flex-direction: column
 				.thead
@@ -1183,28 +1268,45 @@
 	footer
 		.footer_wrapper
 			.item
-				min-height: 600px
+				min-height: 500px
 				&_left
 					display: block
 					width: 100%
-					height: 600px
+					height: 500px
 					margin: 0
 					margin-right: -4px
 				&_right
 					display: block
 					width: 100%
-					height: 600px
+					height: 500px
 					margin: 0
 					background: linear-gradient(0deg,rgba(11, 29, 44, 0.9),rgba(11, 29, 44, 0.9)),url(../img/first_bg.jpg) no-repeat center center
 					background-size: cover
 					position: relative
+					.item_logo
+						content: ""
+						position: absolute
+						left: 20px
+						width: 114px
+						height: 92px
+						background: $brown
+						&-top
+							color: #000
+							position: relative
+							top: 20px
+							width: 100%
+							display: inline-block
+						&-bottom
+							img
+								padding-top: 0
+								width: 60px
 					.contacts
 						content: ""
 						position: absolute
-						max-width: 320px
-						top: 60%
+						max-width: 360px
+						top: 50%
 						height: 150px
-						left: 74px
+						left: 20px
 						flex-direction: row
 						.contacts_item
 							text-align: left
@@ -1225,19 +1327,23 @@
 						content: ""
 						position: absolute
 						bottom: 50px
-						left: 74px
+						left: 20px
 						font-family: Ubuntu
 						font-style: normal
 						font-weight: normal
 						font-size: 15px
 						line-height: 17px
 						color: #828282
+						width: 80%
 	// 7. footer - End
 
 // 480 - 320
 @media only screen and (max-width : 480px)
+	.details .details_wrapper .details_carousel .owl-dots
+		margin: 10px 0
 	// 1. first - Begin
 	.first
+		height: 530px
 		header
 			padding: 0
 			height: 58px
@@ -1252,7 +1358,7 @@
 					left: 0
 					position: relative
 					width: 114px
-					height: 115px
+					height: 92px
 				.item_md
 					display: none
 				.item_sm
@@ -1278,10 +1384,11 @@
 						font-weight: normal
 						font-size: 17px
 						line-height: 38px
+	.first .wrapper .first_carousel .owl-dots
+		top: 45px
 	// 1. first - End
 	// categories - Begin
 	.categories
-		padding-top: 20px
 		.wrapper    
 			padding: 0 10px
 			.categories_wrapper
@@ -1308,15 +1415,21 @@
 						font-weight: 800
 						margin-top: 16px
 	// categories - End
+	.about .wrapper .about-title
+		max-width: 300px
+		margin: 0 auto 70px auto
+		font-size: 28px
+		line-height: 34px
+	.categories2 .wrapper .categories2-title-sm
+		margin-bottom: 30px
 	// 3. categories2 - Begin
 	.categories2
-		padding-bottom: 70px
 		.wrapper
 			padding: 0 10px
 			.categories2-title-sm
 				font-family: Proxima Nova
-				font-size: 32px
-				line-height: 39px
+				font-size: 28px
+				line-height: 34px
 				text-align: center
 				text-transform: uppercase
 				color: #142432
@@ -1354,7 +1467,6 @@
 					width: 150px
 					height: 8px
 			.categories2_wrapper
-				margin-top: 40px
 				display: flex
 				justify-content: center
 				align-items: baseline
@@ -1395,9 +1507,14 @@
 						text-align: left
 						margin-top: 20px
 	// 3. categories2 - End
+	.details .wrapper .details-title-sm
+		font-size: 28px
+		line-height: 34px
+	.diagnostic .wrapper .diagnostic-title
+		font-size: 28px
+		line-height: 34px
 	// 5. price - Begin
 	.price
-		padding: 100px 0
 		.wrapper
 			padding: 0 20px
 			.price-title
@@ -1420,7 +1537,6 @@
 					width: 150px
 					height: 8px
 			.price_wrapper
-				margin-top: 100px  
 				display: flex
 				flex-direction: column
 				.thead
@@ -1454,7 +1570,6 @@
 	// 5. price - End
 	// 5. price2 - Begin
 	.price2
-		padding: 100px 0
 		.wrapper
 			padding: 0 20px
 			.price2-title
@@ -1476,8 +1591,7 @@
 					margin: 0 auto
 					width: 150px
 					height: 8px
-			.price2_wrapper
-				margin-top: 100px  
+			.price2_wrapper 
 				display: flex
 				flex-direction: column
 				.thead
@@ -1509,7 +1623,28 @@
 						color: #142432
 						padding-left: 20px
 	// 5. price2 - End
-
+	footer .footer_wrapper .item_right
+		min-height: 500px
+		height: auto
+	footer .footer_wrapper .item_right .contacts
+		flex-direction: column
+		top: 60%
+		height: 300px
+		width: 90%
+	footer .footer_wrapper .item_right .contacts .contacts_item
+		width: 90%
+		margin-bottom: 17px
+	footer .footer_wrapper .item_right .info
+		bottom: 40px
+		line-height: 20px
+		width: 80%
+	.first header .wrapper .item_logo-top
+		color: #000
+		position: relative
+		top: 20px
+		width: 100%
+		display: inline-block
+	
 // 320 - 0
 @media only screen and (max-width : 320px)
 	.first .wrapper .first_carousel .first_item-title

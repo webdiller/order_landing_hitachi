@@ -32,6 +32,33 @@ a:hover
 p
     margin: 0
 // custom - End
+// padding & margins - Begin
+body .about
+    padding-top: 100px
+body .categories2
+    padding-top: 100px
+    padding-bottom: 100px
+body .details
+    padding-top: 100px
+    padding-bottom: 150px
+body .diagnostic
+    padding-top: 100px
+body .price
+    padding-top: 100px
+body .price2
+    padding-top: 100px
+body footer
+    margin-top: 100px
+// line
+.about .wrapper .about-title,
+.categories2 .wrapper .categories2-title,
+.details .wrapper .details-title,
+.price .wrapper .price-title,
+.price2 .wrapper .price2-title,
+    margin-bottom: 80px
+.diagnostic .wrapper .diagnostic-title
+    margin: 0 auto 80px auto
+// padding & margins - End
 
 
 // 1. first - Begin
@@ -81,13 +108,14 @@ p
                     &-top
                         color: #000
                         position: relative
-                        top: 20px
+                        top: 15px
                         width: 100%
+                        font-size: 15px
                         display: inline-block
                     &-bottom
                         img
-                            padding-top: 10px
-                            width: 70px
+                            padding-top: 15px
+                            width: 60px
             .item_md
                 display: none
             .item_sm
@@ -189,6 +217,10 @@ p
             .item:last-child
                 margin-right: 0
             .item
+                &:hover
+                    cursor: pointer
+                &:hover .item_title
+                    color: $brown
                 margin-top: 40px
                 .item_img
                     max-width: 100%
@@ -203,10 +235,10 @@ p
                     color: #142432
                     font-weight: 800
                     margin-top: 16px
+                    transition: all .3s ease
 // categories - End
 // 3. about - Begin
 .about
-    padding: 100px 0
     .wrapper
         padding: 0 20px
         .about-title
@@ -229,7 +261,6 @@ p
                 width: 150px
                 height: 8px
         .about_wrapper
-            margin-top: 100px  
             display: flex
             .item
                 flex: 1
@@ -249,7 +280,6 @@ p
 // 3. about - End
 // 4. categories2 - Begin
 .categories2
-    padding-bottom: 90px
     .wrapper
         padding: 0 20px
         .categories2-title-sm
@@ -274,7 +304,6 @@ p
                 width: 150px
                 height: 8px
         .categories2_wrapper
-            margin-top: 80px
             display: flex
             justify-content: center
             align-items: baseline
@@ -313,7 +342,6 @@ p
 // 4. categories2 - End
 // 3. details - Begin
 .details
-    padding: 100px 0
     background: #F2F2F2
     .wrapper
         padding: 0 20px
@@ -346,7 +374,6 @@ p
             color: #142432
             font-weight: 800
             position: relative
-            margin-bottom: 100px
             &::before
                 content: ""
                 position: absolute
@@ -378,7 +405,6 @@ p
                         font-size: 20px
                         line-height: 24px
                         text-align: center
-                        text-transform: uppercase
                         color: #142432
                         font-weight: 700
                         padding-top: 24px
@@ -388,7 +414,6 @@ p
                         font-size: 17px
                         line-height: 24px
                         text-align: center
-                        text-transform: uppercase
                         color: #142432
                         font-weight: 400
                         margin-top: 16px
@@ -437,11 +462,9 @@ p
 // 3. details - End
 // 4. diagnostic - Begin
 .diagnostic
-    padding: 100px 0
     .wrapper
         padding: 0 20px
         .diagnostic-title
-            margin: 0 auto
             max-width: 700px
             font-family: Proxima Nova
             font-size: 42px
@@ -461,20 +484,23 @@ p
                 margin: 0 auto
                 width: 150px
                 height: 8px
-        .diagnostic_wrapper
-            margin-top: 100px  
+        .diagnostic_wrapper 
             .group
-                height: 60px
+                min-height: 60px
                 background: #F2F2F2
                 text-align: left
                 margin: 10px 0
                 padding-left: 10px
+                display: flex
+                flex-wrap: wrap
+                justify-content: flex-start
+                align-items: center
+                position: relative
                 label
                     font-family: Ubuntu
                     font-style: normal
                     font-weight: normal
                     font-size: 17px
-                    line-height: 60px
                     color: #142432
                     cursor: pointer
                 input[type="checkbox"]
@@ -483,13 +509,24 @@ p
                         content: url(../img/checked.png)
                         background: #EED2A1
                 label
-                    padding-left: 20px
+                    padding-left: 30px
+                    margin-bottom: 0
+                    padding-right: 16px
+                    padding-top: 10px
+                    padding-bottom: 10px
                     &::before
                         transition: all .3s ease
-                        position: relative
+                        position: absolute
                         content: url(../img/checked.png)
-                        left: -10px
-                        padding: 2px 4px
+                        top: 50%
+                        transform: translateY(-50%)
+                        right: 0
+                        bottom: 0
+                        text-align: center
+                        vertical-align: middle
+                        left: 8px
+                        width: 24px
+                        height: 24px
                         background: #ffffff
                         border: 1px solid #C4C4C4
             .showMore
@@ -517,7 +554,6 @@ p
 // 4. diagnostic - End
 // 5. price - Begin
 .price
-    padding: 100px 0
     .wrapper
         padding: 0 20px
         .price-title
@@ -540,7 +576,6 @@ p
                 width: 150px
                 height: 8px
         .price_wrapper
-            margin-top: 100px  
             display: flex
             flex-direction: column
             .thead
@@ -574,7 +609,6 @@ p
 // 5. price - End
 // 5. price2 - Begin
 .price2
-    padding: 100px 0
     .wrapper
         padding: 0 20px
         .price2-title
@@ -597,7 +631,6 @@ p
                 width: 150px
                 height: 8px
         .price2_wrapper
-            margin-top: 100px  
             display: flex
             flex-direction: column
             .thead
@@ -655,16 +688,18 @@ footer
                     width: 150px
                     height: 140px
                     background: $brown
+                    font-size: 15px
                     &-top
                         color: #000
                         position: relative
-                        top: 20px
+                        top: 15px
                         width: 100%
+                        font-size: 15px
                         display: inline-block
                     &-bottom
                         img
-                            padding-top: 10px
-                            width: 70px
+                            padding-top: 15px
+                            width: 60px
                 .contacts
                     content: ""
                     position: absolute
