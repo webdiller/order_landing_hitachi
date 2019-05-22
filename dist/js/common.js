@@ -1,15 +1,11 @@
 $(document).ready(function () {
     $('#carousel1').owlCarousel({
-<<<<<<< HEAD
-        loop: true,
-=======
         mouseDrag: false,
         touchDrag: false,
         loop: true,
         animateOut: "fadeOut",
         animateIn: "fadeIn",
         smartSpeed: 450,
->>>>>>> master
         nav: true,
         center: true,
         navText: ["<img src='./img/arrowleft_white.png'>","<img src='./img/arrowright_white.png'>"],
@@ -17,11 +13,6 @@ $(document).ready(function () {
             0: {
                 items: 1
             }
-<<<<<<< HEAD
-        }
-    });
-
-=======
         },
     });
 
@@ -44,7 +35,6 @@ $(document).ready(function () {
     // });
 
 
->>>>>>> master
     $('#carousel2').owlCarousel({
         center: false,
         loop: true,
@@ -70,11 +60,6 @@ $(document).ready(function () {
         }
     });
 
-<<<<<<< HEAD
-    $('.showMore').on('click', function () { 
-        $('.showMoreTarget').toggle('active');
-     });
-=======
     var arr = document.querySelectorAll('.myrow .item');
     var x = 0;
     var y = 10;
@@ -98,6 +83,5 @@ $(document).ready(function () {
         }
     });
 
->>>>>>> master
 
 });
