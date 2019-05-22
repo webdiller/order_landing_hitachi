@@ -12,7 +12,6 @@ body
     font-weight: 700
     font-family: 'Ubuntu', Helvetica, sans-serif
     text-align: center
-    // font-family: 'IBM Plex Mono', monospace
 
 body, html
     width: 100%
@@ -63,11 +62,10 @@ body footer
 
 // 1. first - Begin
 .first
+    transition: all
     position: relative
     min-height: 100vh
     height: 830px
-    background: linear-gradient(0deg,rgba(11, 29, 44, 0.796),rgba(11, 29, 44, 0.796)),url(../img/first_bg.jpg) no-repeat center center
-    background-size: cover
     header
         background: #142432
         height: 120px
@@ -97,8 +95,9 @@ body footer
                 align-items: center
                 &-brown
                     color: $brown
-                    font-size: 15px
+                    font-size: 19px
                 &-white
+                    font-size: 19px
                     color: $white
                     font-weight: 700
                 &_logo
@@ -112,7 +111,7 @@ body footer
                         line-height: 14px
                         font-weight: normal
                         width: 100%
-                        font-size: 15px
+                        font-size: 19px
                         display: inline-block
                     &-bottom
                         img
@@ -122,15 +121,45 @@ body footer
                 display: none
             .item_sm
                 display: none
-    .wrapper
+    .first_wrapper
+        margin: 0 auto
+        width: 100%
         position: relative
         width: 100%
         height: 100%
+        overflow-x: hidden
         .first_carousel
             position: relative
-            top: 50%
-            transform: translateY(-50%)
+            width: 100%
+            height: 100%
+            left: 0
+            right: 0
+        .owl-carousel .owl-stage-outer
+            height: 100%
+        .owl-carousel .owl-stage
+            height: 100%
+            position: relative
+        .owl-carousel .owl-item
+            height: 100%
+            .item
+                height: 100%
             .first_item
+                height: 100%
+                bottom: 10px
+                padding-top: 100px
+                display: flex
+                flex-direction: column
+                justify-content: center
+                align-items: center
+                &-slide1
+                    background: linear-gradient(0deg, rgba(20, 36, 50, 0.85), rgba(20, 36, 50, 0.85)), url(../img/first_bg.jpg) no-repeat center 0 
+                    background-size: cover
+                &-slide2
+                    background: linear-gradient(0deg, rgba(20, 36, 50, 0.65), rgba(20, 36, 50, 0.85)), url(../img/first_2.jpg) no-repeat center 0 
+                    background-size: cover
+                &-slide3
+                    background: linear-gradient(0deg, rgba(20, 36, 50, 0.65), rgba(20, 36, 50, 0.85)), url(../img/first_3.jpg) no-repeat center 0 
+                    background-size: cover
                 &-title
                     max-width: 1020px
                     margin: 0 auto
@@ -158,54 +187,54 @@ body footer
                     font-style: normal
                     font-weight: normal
                     font-size: 24px
-                    line-height: 38px
+                    line-height: 52px
                     text-align: center
                     color: #FFFFFF
                     margin: 82px auto 0 auto
                     max-width: 400px
                     padding: 0 20px
-            .owl-dots
-                margin: 0
-                position: relative
-                top: 130px
-                .owl-dot
-                    outline: none
-                    span
-                        width: 20px
-                        height: 20px
-                        margin: 0 15px
-                        background: #505965
-                        transition: all .3s ease
-                        &:hover
-                            background: #fff
-                .owl-dot.active
-                    span
-                        background: #fff 
-            .owl-nav
-                top: 35%
-                right: 0
-                left: 0
-                content: ""
-                position: absolute
-                width: 100%
-                z-index: 1
-            .owl-nav button.owl-prev
-                transition: all .3s ease
+        .owl-dots
+            position: relative
+            top: -100px
+            .owl-dot
                 outline: none
-                position: absolute
-                left: -70px
-                &:hover
-                    background: none
-            .owl-nav button.owl-next
-                transition: all .3s ease
-                outline: none
-                position: absolute
-                right: -70px
-                top: 25%
-                &:hover
-                    background: none
-                &:hover img
-                    filter: hue-rotate(180deg)
+                span
+                    width: 20px
+                    height: 20px
+                    margin: 0 15px
+                    background: #707d8f
+                    transition: all .3s ease
+                    &:hover
+                        background: #fff
+            .owl-dot.active
+                span
+                    background: #fff 
+        .owl-nav
+            top: 50%
+            right: 0
+            left: 0
+            content: ""
+            position: absolute
+            max-width: 1300px
+            margin: 0 auto
+            z-index: 1
+        .owl-nav button.owl-prev
+            transition: all .3s ease
+            outline: none
+            position: absolute
+            left: 0
+            &:hover
+                background: none
+        .owl-nav button.owl-next
+            transition: all .3s ease
+            outline: none
+            position: absolute
+            right: 0
+            top: 25%
+            &:hover
+                background: none
+            &:hover img
+                filter: hue-rotate(180deg)
 // 1. first - End
 // categories - Begin
 .categories
@@ -486,51 +515,32 @@ body footer
                 margin: 0 auto
                 width: 150px
                 height: 8px
-        .diagnostic_wrapper 
-            .group
-                min-height: 60px
-                background: #F2F2F2
-                text-align: left
-                margin: 10px 0
-                padding-left: 10px
+        .diagnostic_wrapper
+            .myrow
                 display: flex
                 flex-wrap: wrap
-                justify-content: flex-start
-                align-items: center
-                position: relative
-                label
+                justify-content: space-between
+                .item
+                    width: 32%
+                    min-height: 60px
+                    background: #F2F2F2
+                    display: flex
+                    flex-wrap: wrap
+                    justify-content: flex-start
+                    align-items: center
                     font-family: Ubuntu
                     font-style: normal
                     font-weight: normal
                     font-size: 17px
                     color: #142432
                     cursor: pointer
-                input[type="checkbox"]
+                    padding: 10px 10px 10px 20px
+                    margin: 5px 0
+                .item_hidden_1920_1024,
+                .item_hidden_1024_768,
+                .item_hidden_480_320
+                    text-align: left
                     display: none
-                    &:checked + label::before
-                        content: url(../img/checked.png)
-                        background: #EED2A1
-                label
-                    padding-left: 30px
-                    margin-bottom: 0
-                    padding-right: 16px
-                    padding-top: 10px
-                    padding-bottom: 10px
-                    &::before
-                        transition: all .3s ease
-                        position: absolute
-                        content: url(../img/checked.png)
-                        top: 50%
-                        transform: translateY(-50%)
-                        right: 0
-                        bottom: 0
-                        text-align: center
-                        vertical-align: middle
-                        left: 8px
-                        width: 24px
-                        height: 24px
-                        background: #ffffff
-                        border: 1px solid #C4C4C4
             .showMore
                 font-family: Ubuntu
                 font-style: normal
@@ -542,6 +552,7 @@ body footer
                 position: relative
                 display: inline-block
                 transition: all .3s ease
+                margin-top: 30px
                 &::before
                     content: url(../img/arrow_down.png)
                     position: absolute
@@ -549,10 +560,6 @@ body footer
                 &:hover
                     cursor: pointer
                     color: #dfac53
-        .showMoreTarget
-            display: none
-        .showMoreTarget.active
-            display: block
 // 4. diagnostic - End
 // 5. price - Begin
 .price
@@ -680,7 +687,7 @@ footer
                 width: 50%
                 height: 600px
                 margin: 0
-                background: linear-gradient(0deg,rgba(11, 29, 44, 0.9),rgba(11, 29, 44, 0.9)),url(../img/first_bg.jpg) no-repeat center center
+                background: linear-gradient(0deg,rgba(11, 29, 44, 0.9),rgba(11, 29, 44, 0.9)),url(../img/first_bg.jpg) no-repeat 0 center
                 background-size: cover
                 position: relative
                 .item_logo
@@ -698,7 +705,7 @@ footer
                         line-height: 14px
                         font-weight: normal
                         width: 100%
-                        font-size: 15px
+                        font-size: 19px
                         display: inline-block
                     &-bottom
                         position: relative
@@ -716,6 +723,7 @@ footer
                     transform: translateY(-50%)
                     display: flex
                     flex-wrap: wrap
+                    padding-right: 20px
                     .contacts_item
                         text-align: left
                         width: 50%
@@ -726,8 +734,9 @@ footer
                         font-size: 17px
                         &-brown
                             color: $brown
-                            font-size: 15px
+                            font-size: 19px
                         &-white
+                            font-size: 19px
                             color: $white
                             font-weight: 700
                 .info

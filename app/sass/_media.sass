@@ -5,6 +5,9 @@
 // 1440 - 1024
 @media only screen and (max-width : 1440px)
 	// padding & margins - Begin
+	.first .first_wrapper .owl-carousel .owl-item .first_item-title
+		font-size: 48px
+		line-height: 58px
 	body .about
 		padding-top: 90px
 	body .categories2
@@ -38,7 +41,7 @@
 			.wrapper
 				.item_logo
 					height: 120px
-		.wrapper	
+		.first_wrapper	
 			.first_carousel
 				.first_item
 					&-title
@@ -381,13 +384,28 @@
 						.contacts_item
 							&-brown
 								color: $brown
-								font-size: 15px
 							&-white
 					.info
 	// 7. footer - End
 
 // 1024 - 768
 @media only screen and (max-width : 1024px)
+	.first .first_wrapper .owl-nav
+		display: none
+	.first .first_wrapper .owl-carousel .owl-item .first_item-title
+		font-size: 42px
+	.first header .wrapper .item-white
+		font-size: 17px
+	.first .first_wrapper .owl-carousel .owl-item .first_item-title:before
+		bottom: -20px
+	.first .first_wrapper .owl-carousel .owl-item .first_item-descr
+		margin: 40px auto 0 auto
+	.first header .wrapper .item-brown
+		font-size: 17px
+	.item_hidden_1920_1024
+		display: none !important
+	.diagnostic .wrapper .diagnostic_wrapper .myrow .item
+		width: 49%
 	// padding & margins - Begin
 	body .about
 		padding-top: 80px
@@ -787,7 +805,6 @@
 							margin-bottom: 25px
 							&-brown
 								color: $brown
-								font-size: 15px
 							&-white
 								color: $white
 								font-weight: 700
@@ -806,6 +823,15 @@
 
 // 768 - 480
 @media only screen and (max-width : 768px)
+	.first .first_wrapper .owl-carousel .owl-item .first_item-title
+		font-size: 32px
+		line-height: 44px
+	.first .first_wrapper .owl-carousel .owl-item .first_item-descr
+		margin-bottom: 50px
+	.first .first_wrapper .owl-carousel .owl-item .first_item
+		padding-top: 0
+	.item_hidden_1024_768
+		display: none !important
 	// padding & margins - Begin
 	body .about
 		padding-top: 70px
@@ -1161,6 +1187,8 @@
 				display: none
 			.showMoreTarget.active
 				display: block
+	.diagnostic .wrapper .diagnostic_wrapper .myrow .item
+		width: 100%
 	// 4. diagnostic - End
 	// 5. price - Begin
 	.price
@@ -1308,8 +1336,7 @@
 					.contacts
 						content: ""
 						position: absolute
-						max-width: 360px
-						top: 50%
+						max-width: 460px
 						height: 150px
 						left: 20px
 						flex-direction: row
@@ -1324,7 +1351,6 @@
 							margin-bottom: 25px
 							&-brown
 								color: $brown
-								font-size: 15px
 							&-white
 								color: $white
 								font-weight: 700
@@ -1344,11 +1370,26 @@
 
 // 480 - 320
 @media only screen and (max-width : 480px)
+	.first .first_wrapper .owl-carousel .owl-item .first_item-title
+		font-size: 28px
+		line-height: 34px
+	.first .first_wrapper .owl-carousel .owl-item .first_item-descr
+		font-size: 17px
+		line-height: 40px
+	.first .first_wrapper .owl-carousel .owl-item .first_item-title:before
+		height: 6px
+		bottom: -30px
+	.first .first_wrapper .owl-carousel .owl-item .first_item-descr
+		margin-top: 40px
+		margin-bottom: 0
 	.details .details_wrapper .details_carousel .owl-dots
 		margin: 10px 0
+	.first .first_wrapper .owl-dots
+		top: -62px
 	// 1. first - Begin
 	.first
-		height: 530px
+		height: 540px
+		min-height: 540px
 		header
 			padding: 0
 			height: 58px
@@ -1631,18 +1672,18 @@
 						padding-left: 20px
 	// 5. price2 - End
 	footer .footer_wrapper .item_right
-		min-height: 500px
+		min-height: 520px
 		height: auto
 	footer .footer_wrapper .item_right .contacts
 		flex-direction: column
-		top: 60%
+		top: 62%
 		height: 300px
 		width: 90%
 	footer .footer_wrapper .item_right .contacts .contacts_item
 		width: 90%
 		margin-bottom: 17px
 	footer .footer_wrapper .item_right .info
-		bottom: 40px
+		bottom: 20px
 		line-height: 20px
 		width: 80%
 	.first header .wrapper .item_logo-top
